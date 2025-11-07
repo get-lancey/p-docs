@@ -46,6 +46,12 @@
               "settings/members",
               "settings/mcp-servers"
             ]
+          },
+          {
+            "group": "Issues",
+            "pages": [
+              "issues/list"
+            ]
           }
         ]
       }
