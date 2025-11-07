@@ -1,0 +1,236 @@
+---
+title: "Auto processing"
+description: "Configure Lancey to automatically process tasks based on custom prompts and customer feedback."
+---
+
+## Overview
+
+Auto Processing enables you to define custom prompts that tell Lancey which tasks it should automatically work on. Instead of manually triggering tasks, Lancey monitors incoming feedback and customer issues, then intelligently decides which ones match your criteria to start processing automatically.
+
+<Tip>
+  Auto Processing is perfect for teams that want to reduce manual task creation while maintaining control over which issues Lancey should tackle. Set it once and let Lancey handle the rest.
+</Tip>
+
+## How it works
+
+Auto Processing follows a simple workflow:
+
+1. **You define a prompt** - Write clear instructions about what types of tasks Lancey should work on
+2. **Lancey monitors feedback** - Your integrations (Slack, Intercom, GitHub issues) feed customer feedback to Lancey
+3. **AI evaluation** - Lancey evaluates each piece of feedback against your custom prompt
+4. **Automatic execution** - Matching tasks are automatically added to your queue and processing begins
+5. **Team review** - Your team can review and approve tasks before they're merged
+
+## Setup
+
+<Steps>
+  <Step title="Navigate to Auto Processing">
+    Go to **Settings --\> Issues** in your Lancey dashboard
+  </Step>
+  <Step title="Add your processing instructions">
+    In the **Processing instructions** text field, provide specific instructions for how the AI should evaluate and process issues
+  </Step>
+  <Step title="Write clear instructions">
+    Describe the types of tasks Lancey should automatically process. Be specific about:
+    - Issue types (bugs, features, enhancements)
+    - Priority levels
+    - Source integrations (Slack, Intercom, GitHub)
+    - Any specific keywords or patterns
+  </Step>
+  <Step title="Enable Auto Processing">
+    Toggle the **Auto Processing** switch to enable automatic processing for your rules
+  </Step>
+  <Step title="Save your configuration" stepNumber={5}>
+    Click **Save** to apply your processing instructions. Lancey will now automatically process matching issues based on your rules
+  </Step>
+</Steps>
+
+## Writing effective prompts
+
+The quality of your auto-processing depends on how well you write your prompts. Here are key principles:
+
+<CardGroup cols={2}>
+  <Card title="Be specific" icon="lightbulb">
+    Use concrete criteria rather than vague descriptions
+  </Card>
+  <Card title="Use examples" icon="sparkles">
+    Include examples of what should and shouldn't be processed
+  </Card>
+  <Card title="Define priority" icon="zap">
+    Specify minimum severity/priority levels to process
+  </Card>
+  <Card title="Set boundaries" icon="fence">
+    Clearly state what NOT to process to avoid false positives
+  </Card>
+</CardGroup>
+
+## Prompt examples
+
+### Example 1: Customer bug fixes
+
+```
+Process any GitHub issues or customer reports that describe:
+- Bugs affecting production or user experience
+- Error messages from users
+- Features that don't work as documented
+
+Do NOT process:
+- Feature requests or enhancement suggestions
+- Questions or documentation clarifications
+- Issues related to non-core functionality
+
+Priority: Only process issues marked as "critical" or "high" priority
+Source: GitHub issues and Intercom support conversations
+```
+
+### Example 2: High-priority enhancements
+
+```
+Automatically work on enhancement requests that:
+- Come from paying customers
+- Have been upvoted or requested by multiple users
+- Are tagged with "high-value-customer" or "revenue-impacting"
+- Relate to core product features
+
+Skip:
+- Low-priority nice-to-haves
+- Requests from free tier users
+- Niche or edge-case features
+
+Severity: Only process if marked as "medium" priority or higher
+Source: Intercom feature requests and GitHub discussions
+```
+
+### Example 3: Security and performance fixes
+
+```
+Process all tasks related to:
+- Security vulnerabilities or potential exploits
+- Performance issues (slow endpoints, memory leaks)
+- Data integrity problems
+- Dependency updates and patching
+
+Exclude:
+- Cosmetic issues
+- Minor UI improvements
+- Non-breaking technical debt
+
+Timeline: These tasks should be processed with highest urgency
+Source: GitHub issues, security alerts, and internal reports
+```
+
+### Example 4: API and integration issues
+
+```
+Automatically handle tasks for:
+- External API integration failures
+- Third-party service connectivity problems
+- Webhook or callback issues
+- Deprecated API endpoint migrations
+
+Do NOT process:
+- Internal service connectivity issues (handle manually)
+- Issues requiring database schema changes
+- Tasks needing manual data migration
+
+Severity: Process if there's active customer impact
+Source: Slack alerts and GitHub integration issues
+```
+
+### Example 5: Documentation and typo fixes
+
+```
+Process low-effort improvements:
+- Typos in documentation or code comments
+- Broken links in docs or README files
+- Outdated code examples
+- Missing API documentation
+
+Exclude:
+- Major documentation rewrites
+- Complex API documentation from scratch
+- Content requiring SME review
+
+Batch size: Process up to 5 of these tasks daily
+Source: GitHub issues labeled "documentation" and "typo"
+```
+
+## Best practices
+
+<Accordion title="Start simple">
+  Begin with a narrowly focused prompt that targets a specific type of task. Once you see it working well, you can expand or create additional prompts for other use cases.
+</Accordion>
+
+<Accordion title="Monitor accuracy">
+  Review which tasks Lancey auto-processes during the first week. Refine your prompt if you see too many false positives or misses important issues.
+</Accordion>
+
+<Accordion title="Use keywords strategically">
+  Include specific keywords, labels, and patterns from your integrations. Reference your Slack channels, GitHub labels, and Intercom tags explicitly.
+</Accordion>
+
+<Accordion title="Set realistic expectations">
+  Prompt quality affects results. A vague prompt like "fix bugs" will have lower accuracy than "fix critical bugs affecting the login flow reported in Slack #bugs channel."
+</Accordion>
+
+<Accordion title="Review before merge">
+  Even with auto-processing enabled, always require manual review before tasks are merged. This maintains code quality and prevents unintended changes.
+</Accordion>
+
+<Accordion title="Iterate based on results">
+  Track which auto-processed tasks succeed or fail. Use this data to refine your prompt over time.
+</Accordion>
+
+## Troubleshooting
+
+<Accordion title="Lancey isn't processing any tasks?">
+  Check that:
+  - Your prompt is enabled in the Auto Processing settings
+  - Your integrations (Slack, Intercom, GitHub) are properly configured
+  - Your feedback sources are actively sending messages
+  - Your prompt criteria match the incoming feedback
+</Accordion>
+
+<Accordion title="Too many false positives?">
+  Your prompt might be too broad. Try:
+  - Adding more specific keywords or criteria
+  - Increasing priority thresholds
+  - Excluding more edge cases
+  - Testing with fewer sources initially
+</Accordion>
+
+<Accordion title="Tasks aren't being processed fast enough?">
+  Verify that:
+  - Your AI model configuration is set up correctly
+  - Your GitHub repository and credentials are valid
+  - Your team has available capacity to review PRs
+  - Your prompt isn't requiring unnecessary manual approval steps
+</Accordion>
+
+<Accordion title="How do I disable or modify a prompt?">
+  You can:
+  - Temporarily disable a prompt by toggling it off in Auto Processing settings
+  - Edit an existing prompt to adjust criteria
+  - Delete a prompt and create a new one
+  - Create multiple prompts for different task types
+</Accordion>
+
+
+## Next steps
+
+<CardGroup>
+  <Card title="Create Tasks" icon="plus" href="/tasks/create">
+    Learn how to manually create and manage tasks
+  </Card>
+  <Card title="Modify Tasks" icon="pencil" href="/tasks/modify">
+    Update and refine your tasks
+  </Card>
+  <Card title="Integrations" icon="link" href="/integrations/settings">
+    Configure integrations to feed feedback to Lancey
+  </Card>
+</CardGroup>
+
+<Note>
+  Need help crafting the perfect auto-processing prompt? Join our [Discord community](https://discord.com/invite/xthMgsBWeV) for quick support or [schedule a call](https://cal.com/pateladi/support) with our team.
+</Note>
+

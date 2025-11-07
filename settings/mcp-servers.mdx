@@ -1,0 +1,140 @@
+---
+title: "MCP Servers"
+description: "Configure Model Context Protocol servers to extend Lancey's capabilities."
+---
+
+## Overview
+
+MCP (Model Context Protocol) Servers allow you to connect external tools, data sources, and services to Lancey. This enables agents to access additional context and capabilities beyond the core platform.
+
+<Tip>
+  MCP servers expand what Lancey agents can do. Connect relevant tools to give agents the information and access they need to work effectively.
+</Tip>
+
+## What are MCP servers?
+
+MCP servers act as bridges between Lancey and external systems:
+
+- **Data access** - Connect to databases, APIs, or knowledge bases
+- **Tool integration** - Integrate with external tools and services
+- **Context enrichment** - Provide agents with additional context and information
+- **Custom capabilities** - Extend Lancey with domain-specific functionality
+
+## Connecting an MCP server
+
+<Steps>
+  <Step title="Navigate to MCP Servers">
+    Go to **Settings → MCP Servers** in your dashboard
+  </Step>
+  <Step title="Click Add Server">
+    Click the **Add** button
+  </Step>
+  <Step title="Enter server details">
+    Provide:
+    - Server URL or connection endpoint
+    - Authentication credentials (if required)
+  </Step>
+  <Step title="Add the server">
+    Click **Add Server** to add the server to your workspace
+  </Step>
+</Steps>
+
+## Managing MCP servers
+
+### Viewing connected servers
+
+Your MCP Servers page displays:
+
+- Status (Connected, Disconnected, Error)
+- Connection type
+- Actions menu
+
+### Updating server configuration
+
+1. Click the server you want to update
+2. Modify the connection details or credentials
+3. Click **Save** to apply changes
+
+### Removing a server
+
+1. Click the menu icon next to the server
+2. Select **Remove**
+3. Confirm the removal
+
+<Warning>
+  Removing a server will stop agents from accessing the resources it provides. Tasks in progress may fail if they depend on this server.
+</Warning>
+
+## Server types
+
+Common MCP server configurations:
+
+- **Database connections** - Connect to PostgreSQL, MySQL, or other databases
+- **API servers** - Integrate with REST or GraphQL APIs
+- **Document stores** - Connect to knowledge bases or documentation systems
+- **Custom tools** - Deploy your own MCP-compatible tools
+- **Third-party services** - Integrate with SaaS platforms
+
+## Best practices
+
+<Accordion title="Start with essential servers">
+  Begin with MCP servers that provide critical context. Add more as needed rather than connecting everything at once.
+</Accordion>
+
+<Accordion title="Monitor server health">
+  Check connection status regularly and set up alerts for disconnections or errors.
+</Accordion>
+
+<Accordion title="Document your servers">
+  Keep clear notes about what each MCP server provides and why it's needed for your team.
+</Accordion>
+
+<Accordion title="Rotate credentials regularly">
+  Update API keys and passwords periodically for security. Remove access for servers no longer in use.
+</Accordion>
+
+
+## Troubleshooting
+
+<Accordion title="Server connection issues?">
+  - Verify the server URL is correct
+  - Check that credentials are valid
+  - Ensure the server is running and accessible
+  - Check firewall/network rules if external
+  - Review server logs for error details
+</Accordion>
+
+<Accordion title="Agents can't access the MCP server?">
+  Verify that:
+  - The server status shows "Connected"
+  - Agents have been running after the server was added
+  - The server isn't rate-limiting requests
+</Accordion>
+
+<Accordion title="Server connection keeps dropping?">
+  - Check server stability and uptime
+  - Verify network connectivity is stable
+  - Update credentials if they recently changed
+  - Contact the server administrator for support
+  - Consider using a more reliable server endpoint
+</Accordion>
+
+<Accordion title="How do I create a custom MCP server?">
+  You can build custom MCP servers following the [Model Context Protocol specification](https://modelcontextprotocol.io). Contact our team for guidance on implementing your specific use case.
+</Accordion>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Integrations" icon="plug" href="/integrations/settings">
+    Explore all available integrations
+  </Card>
+  <Card title="AI Models" icon="brain" href="/quickstart">
+    Configure your AI model settings
+  </Card>
+</CardGroup>
+
+<Note>
+  Need help setting up MCP servers? Join our [Discord community](https://discord.com/invite/xthMgsBWeV) or [schedule a call](https://cal.com/pateladi/support) with our team.
+</Note>
+

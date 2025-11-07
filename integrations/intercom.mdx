@@ -1,5 +1,107 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Intercom"
+description: "Integrate Lancey with Intercom to automatically create PRs for customer support requests and issues."
 ---
 
+## Overview
+
+Connect Lancey with Intercom to automatically convert customer support conversations, feature requests, and bug reports into pull requests. Keep your support team informed when issues are resolved.
+
+<Tip>
+  Intercom integration enables Lancey to scan customer conversations and automatically generate fixes, turning support requests into deployed solutions.
+</Tip>
+
+## Setup
+
+<Steps>
+  <Step title="Integration settings">
+    Head to the [Integrations](https://platform.lancey.ai/settings/integrations) page in your dashboard
+  </Step>
+  <Step title="Select Intercom connector">
+    Click on the **Intercom** connector
+  </Step>
+  <Step title="Authorization">
+    You'll be redirected to Intercom to authorize Lancey. Review the permissions and click **Authorize** to proceed
+  </Step>
+  <Step title="Select workspace">
+    Choose your Intercom workspace to connect with Lancey
+  </Step>
+  <Step title="Configure conversation rules" stepNumber={5}>
+    Set up rules for which conversations Lancey should monitor:
+    - Conversations tagged with specific labels
+    - Conversations assigned to certain teams
+    - Conversations with specific keywords
+  </Step>
+</Steps>
+
+## How it works
+
+Once Intercom is connected, Lancey will:
+
+- **Monitor conversations** - Watch Intercom conversations for support requests and bug reports
+- **Identify action items** - Extract actionable technical issues from customer conversations
+- **Create PRs automatically** - Generate pull requests to address identified issues
+- **Post updates** - Reply in the original Intercom conversation when a PR is created or merged
+- **Track resolutions** - Keep customers informed about when their issues are deployed
+
+## Best practices
+
+<CardGroup cols={2}>
+  <Card title="Use consistent tagging" icon="tag">
+    Tag support requests with labels like "bug", "feature-request", or "urgent" for better routing
+  </Card>
+  <Card title="Provide context" icon="message-circle">
+    Encourage support team to add technical details in conversation notes for Lancey to reference
+  </Card>
+  <Card title="Set rules wisely" icon="sliders">
+    Configure conversation rules to avoid triggering Lancey on every conversation
+  </Card>
+  <Card title="Monitor feedback loop" icon="refresh-cw">
+    Regularly review which conversations lead to PRs to improve your rules
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+<Accordion title="Intercom not showing up in my integrations?">
+  Ensure that:
+  - You have admin access to your Intercom workspace
+  - You're signed into the correct Intercom account
+  - Granted Lancey the required permissions during authorization
+  - Your GitHub repository is connected to Lancey
+</Accordion>
+
+<Accordion title="Lancey isn't picking up conversations?">
+  Verify that:
+  - Your conversation rules are set up correctly in **Settings → Integrations**
+  - Conversations match your configured tags or keywords
+  - The GitHub repository is properly connected
+  - Lancey has permission to read conversations in Intercom
+</Accordion>
+
+<Accordion title="Lancey isn't creating PRs from conversations?">
+  Check that:
+  - Both Intercom and GitHub integrations are active
+  - The PR was successfully created in your GitHub repository
+  - Your GitHub repository is properly connected
+  - Conversation rules are matching the right conversations
+</Accordion>
+
+
+## Next steps
+
+<CardGroup>
+  <Card title="GitHub Integration" icon="github" href="/integrations/github">
+    Learn how to configure your GitHub repositories
+  </Card>
+  <Card title="Slack Integration" icon="slack" href="/integrations/slack">
+    Connect Slack for team notifications
+  </Card>
+  <Card title="Integration Settings" icon="cog" href="/integrations/settings">
+    Explore advanced integration options
+  </Card>
+</CardGroup>
+
+<Note>
+  Need help setting up Intercom integration? Join our [Discord community](https://discord.com/invite/xthMgsBWeV) for quick support or [schedule a call](https://cal.com/pateladi/support) with our team.
+</Note>

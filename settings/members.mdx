@@ -1,0 +1,135 @@
+---
+title: "Members"
+description: "Manage your team members, roles, and permissions in Lancey."
+---
+
+## Overview
+
+The Members section allows you to invite team members, manage their roles, and control who can access your Lancey workspace.
+
+<Warning>
+  Only Admins can invite members, change roles, and remove team members from the workspace.
+</Warning>
+
+## User roles and permissions
+
+Lancey supports the following roles:
+
+### Admin
+- Full access to all workspace settings
+- Can invite and remove team members
+- Can change roles and permissions
+- Can access billing and subscription settings
+- Can create and modify integrations
+
+### Member
+- Can view and manage tasks
+- Can create new tasks
+- Can approve or dismiss suggestions
+- Cannot access billing or team settings
+- Cannot modify integrations
+
+## Inviting team members
+
+<Steps>
+  <Step title="Navigate to Members">
+    Go to **Settings → Members** in your dashboard
+  </Step>
+  <Step title="Add new invitation">
+    Click the **+** button in the Invitations section
+  </Step>
+  <Step title="Enter email addresses">
+    Input the email address of the team member you want to invite
+  </Step>
+  <Step title="Select a role">
+    Choose a role (Admin or Member) for the invitee
+  </Step>
+  <Step title="Send invitation">
+    Click **Send**. The team member will receive an email with an invite link
+  </Step>
+</Steps>
+
+## Managing team members
+
+### Viewing team members
+
+Your Members page displays all current team members with:
+
+- Name and email
+- Role (Admin or Member)
+- Join date
+- Status (Active or Pending)
+
+### Changing a member's role
+
+1. Find the team member in the Members list
+2. Click the role dropdown next to their name
+3. Select the new role
+4. Click **Update**
+
+### Removing a team member
+
+1. Click the menu icon next to the team member
+2. Select **Remove from workspace**
+3. Confirm the removal
+
+<Warning>
+  Removing a team member will revoke their access immediately. Consider exporting any important work first.
+</Warning>
+
+## Pending invitations
+
+Members with "Pending" status haven't accepted their invitation yet:
+
+- **Resend invitation** - Click the menu and select "Resend" to send the invite email again
+- **Cancel invitation** - Click the menu and select "Cancel" to revoke the pending invite
+- **Auto-expire** - Invitations expire after 30 days
+
+## Best practices
+
+<Accordion title="Assign appropriate roles">
+  Give team members the minimum permissions they need. Start with Member role and escalate to Admin only when necessary.
+</Accordion>
+
+<Accordion title="Regularly review team access">
+  Monthly, review your Members list to ensure everyone still needs their access level and remove inactive users.
+</Accordion>
+
+<Accordion title="Use separate Admin accounts">
+  Have multiple admins for your workspace in case one is unavailable. At least one other admin should be able to manage billing and settings.
+</Accordion>
+
+<Accordion title="Monitor pending invitations">
+  Follow up with team members if their invitations are still pending after a few days.
+</Accordion>
+
+## Troubleshooting
+
+<Accordion title="Team member didn't receive invitation?">
+  - Check that the email address is correct
+  - Ask them to check spam/junk folders
+  - Resend the invitation from the Members page
+  - Verify their email domain isn't blocking Lancey
+</Accordion>
+
+<Accordion title="Member can't access the workspace?">
+  Verify that:
+  - They clicked the invite link in the email
+  - They created their account successfully
+  - Their status shows "Active" (not "Pending")
+  - They're using the correct email address
+</Accordion>
+
+<Accordion title="How do I transfer Admin to another user?">
+  You can change a Member's role to Admin by:
+  1. Going to **Settings → Members**
+  2. Clicking the role dropdown next to their name
+  3. Selecting "Admin"
+  4. Clicking "Update"
+</Accordion>
+
+
+<Note>
+  Questions about managing your team? Join our [Discord community](https://discord.com/invite/xthMgsBWeV) or [schedule a call](https://cal.com/pateladi/support) with our team.
+</Note>
+

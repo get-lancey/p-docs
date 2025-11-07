@@ -1,0 +1,167 @@
+---
+title: "Watcher agent"
+description: "Monitor and guide tasks to completion with Lancey's Watcher agent feature."
+---
+
+## Overview
+
+The Watcher agent is a Lancey feature that assigns an AI agent to monitor your tasks and provide intelligent nudges to keep them progressing, just like a human would. This allows you to work on more things simultaneously while your agent ensures tasks move forward efficiently.
+
+<Tip>
+  Watcher agent is assigned to every task by default, giving your team more bandwidth to focus on high-level decisions while agents handle the execution details.
+</Tip>
+
+## How it works
+
+Once a Watcher agent is assigned to a task, it continuously:
+
+- **Monitors progress** - Tracks task execution and identifies blockers
+- **Detects issues** - Identifies when a task gets stuck or encounters problems
+- **Provides nudges** - Suggests next steps or adjustments to keep momentum
+- **Maintains context** - Keeps track of task history and requirements
+- **Adapts dynamically** - Adjusts approach based on task progress and results
+
+This creates a more human-like workflow where an agent actively helps move work forward rather than just executing a single planned path.
+
+## Key features
+
+<CardGroup cols={2}>
+  <Card title="Automatic assignment" icon="robot">
+    Assigned by default to every new task you create
+  </Card>
+  <Card title="Intelligent monitoring" icon="eye">
+    Watches task progress and identifies when intervention is needed
+  </Card>
+  <Card title="Proactive guidance" icon="lightbulb">
+    Suggests course corrections and next steps in real-time
+  </Card>
+  <Card title="Full control" icon="sliders">
+    Easily unassign or reassign agents as needed
+  </Card>
+</CardGroup>
+
+## Managing Watcher agent
+
+### Viewing assignment status
+
+When you open a task, the **Properties panel** on the right side of the screen shows whether a Watcher agent is currently assigned to the task.
+
+### Unassigning Watcher agent
+
+If you want to disable the Watcher agent for a specific task:
+
+<Steps>
+  <Step title="Open the task">
+    Navigate to a task you want to modify
+  </Step>
+  <Step title="Find the Properties panel">
+    Look at the right-hand side of the screen for the Properties panel
+  </Step>
+  <Step title="Click Unassign">
+    Click the **Unassign** button next to the Watcher agent
+  </Step>
+  <Step title="Confirm">
+    Confirm the action when prompted
+  </Step>
+</Steps>
+
+### Reassigning Watcher agent
+
+To re-enable Watcher agent on a task that has been unassigned:
+
+1. Open the task
+2. Look in the Properties panel for an **Assign Watcher agent** option
+3. Click to reassign a new agent to monitor the task
+
+## When to use Watcher agent
+
+Use Watcher agent in these scenarios:
+
+- **Complex tasks** - Keep complex, multi-step tasks on track automatically
+- **Low-priority work** - Let agents handle routine tasks while you focus on important decisions
+- **High volume** - Manage more tasks simultaneously with agent assistance
+- **Uncertain requirements** - Agent can adapt when requirements shift during execution
+
+## When to unassign Watcher agent
+
+Consider unassigning Watcher agent when:
+
+- You need full manual control over task execution
+- The task is simple and doesn't need monitoring
+- You're running experiments that require precise, non-adaptive behavior
+- You want to review and approve each step before the agent proceeds
+- You're working with sensitive or high-risk changes
+
+## Best practices
+
+<Accordion title="Keep agents assigned for routine work">
+  Let Watcher agents handle standard fixes and improvements. This frees your team to focus on strategic decisions and complex problems.
+</Accordion>
+
+<Accordion title="Monitor high-risk tasks manually">
+  For critical or sensitive tasks, consider unassigning the Watcher agent to maintain tighter control and require explicit approvals at each step.
+</Accordion>
+
+<Accordion title="Use in combination with Auto Processing">
+  Pair Watcher agent with Auto Processing for a fully autonomous workflow that monitors and executes tasks with minimal human intervention.
+</Accordion>
+
+<Accordion title="Review agent decisions">
+  Check the task history to see how Watcher agent guided the task. Use this insight to refine your auto-processing rules and task instructions.
+</Accordion>
+
+<Accordion title="Create team policies">
+  Establish team guidelines about when Watcher agents should be assigned or unassigned based on task type, complexity, and risk level.
+</Accordion>
+
+## Troubleshooting
+
+<Accordion title="Watcher agent isn't responding to blockers?">
+  Verify that:
+  - The Watcher agent is still assigned in the Properties panel
+  - Your task instructions are clear and specific
+  - The agent has sufficient context about the issue
+  - Your AI model configuration is set up correctly
+</Accordion>
+
+<Accordion title="Task seems stuck with Watcher agent assigned?">
+  Try:
+  - Checking the task history to see what the agent attempted
+  - Reviewing error messages or logs for specific blockers
+  - Providing additional context or clarification to the task
+  - Manually unassigning and reassigning a fresh agent
+</Accordion>
+
+<Accordion title="Can I assign a different Watcher agent?">
+  When you unassign a Watcher agent, a new agent will be automatically assigned on next task update. All Watcher agents have the same capabilities, so you're not selecting between different types.
+</Accordion>
+
+<Accordion title="How do I know if Watcher agent made changes?">
+  Review the task history and activity log to see:
+  - Actions the agent suggested
+  - Changes it made or attempted
+  - Course corrections it provided
+  - Any errors it encountered
+</Accordion>
+
+## Next steps
+
+<CardGroup cols={2}>
+  <Card title="Create Tasks" icon="check" href="/tasks/create">
+    Create new tasks and let Watcher agent manage them
+  </Card>
+  <Card title="Modify Tasks" icon="pencil" href="/tasks/modify">
+    Learn how to update and refine your tasks
+  </Card>
+  <Card title="Auto Processing" icon="robot" href="/tasks/auto-processing">
+    Combine with auto-processing for fully autonomous workflows
+  </Card>
+  <Card title="Integrations" icon="plug" href="/integrations/settings">
+    Connect more sources for Watcher agent to monitor
+  </Card>
+</CardGroup>
+
+<Note>
+  Questions about Watcher agent? Join our [Discord community](https://discord.com/invite/xthMgsBWeV) for quick support or [schedule a call](https://cal.com/pateladi/support) with our team.
+</Note>
+

@@ -1,0 +1,69 @@
+---
+title: "Memory"
+description: "Configure how Lancey stores and manages context for your tasks."
+---
+
+## Overview
+
+Memory in Lancey is automatically managed and saved based on agent interactions. As agents work on tasks, Lancey captures context, decisions, and patterns to help future agents understand your codebase and make better decisions.
+
+<Tip>
+  Memory is automatically saved from every agent interaction. The more tasks agents complete, the better they become at understanding your codebase and making consistent decisions.
+</Tip>
+
+## How memory works
+
+Memory is captured automatically through:
+
+- **Agent interactions** - Context from each task the agent works on
+- **Code patterns** - Learned patterns from your repository
+- **Decision history** - Previous decisions and outcomes
+- **Team preferences** - Common practices and patterns in your codebase
+
+Once memory is captured, agents can leverage it on subsequent tasks to make more informed decisions and maintain consistency.
+
+## Viewing your memory
+
+To see the memory captured from your agent interactions:
+
+1. Go to **Settings → Memory** in your Lancey dashboard
+2. View the context and patterns that have been learned from completed tasks
+3. This memory is automatically used by agents on future tasks
+
+## Best practices
+
+<Accordion title="Let agents build memory over time">
+  The more tasks agents complete, the better they understand your codebase. Complete several tasks before expecting agents to reference past patterns.
+</Accordion>
+
+<Accordion title="Work in consistent projects">
+  Consistent project structure and naming conventions help agents learn and apply patterns more effectively.
+</Accordion>
+
+<Accordion title="Provide clear task instructions">
+  Well-documented task requirements help agents learn the right patterns and decisions to remember.
+</Accordion>
+
+<Accordion title="Review agent decisions">
+  Check the first few tasks agents complete. This helps you understand what patterns they're learning and make adjustments if needed.
+</Accordion>
+
+## Troubleshooting
+
+<Accordion title="Agents not referencing previous patterns?">
+  Ensure that:
+  - Multiple tasks have been completed so agents have context to draw from
+  - Memory settings are configured to use historical context
+  - Your tasks and codebase structure are consistent
+</Accordion>
+
+<Accordion title="Agents making inconsistent decisions?">
+  - Provide clearer examples in task descriptions
+  - Ensure your team has established consistent coding practices
+  - Give agents more context through additional completed tasks
+</Accordion>
+
+<Note>
+  Questions about memory configuration? Join our [Discord community](https://discord.com/invite/xthMgsBWeV) for quick support or [schedule a call](https://cal.com/pateladi/support) with our team.
+</Note>
+

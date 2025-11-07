@@ -1,5 +1,100 @@
 ---
-title: 'New file'
-description: 'Description of your new file.'
+title: "Linear"
+description: "Integrate Lancey with Linear to automatically create PRs for issues and sync task status."
 ---
 
+## Overview
+
+Connect Lancey with Linear to automatically generate pull requests for issues, sync task status across both platforms, and keep your team aligned on what's being worked on.
+
+<Tip>
+  Linear integration allows Lancey to automatically pick up issues and link them to PRs, creating a seamless workflow between issue tracking and code delivery.
+</Tip>
+
+## Setup
+
+<Steps>
+  <Step title="Integration settings">
+    Head to the [Integrations](https://platform.lancey.ai/settings/integrations) page in your dashboard
+  </Step>
+  <Step title="Select Linear connector">
+    Click on the **Linear** connector
+  </Step>
+  <Step title="Authorization">
+    You'll be redirected to Linear to authorize Lancey. Click **Authorize** to grant the necessary permissions
+  </Step>
+  <Step title="Select workspace">
+    Choose the Linear workspace you want to connect to Lancey
+  </Step>
+  <Step title="Configure sync settings" stepNumber={5}>
+    Select which teams or projects you want Lancey to work with. You can update these settings anytime
+  </Step>
+</Steps>
+
+## How it works
+
+Once Linear is connected, Lancey will:
+
+- **Automatically detect issues** - Monitor your Linear issues for new tasks
+- **Create PRs** - Generate pull requests to fix issues based on your issue descriptions
+- **Link PRs to issues** - Automatically link created PRs back to Linear issues
+- **Update issue status** - Sync task status between Lancey and Linear
+- **Assign reviewers** - Reference issue assignments when creating PRs
+
+## Best practices
+
+<CardGroup cols={2}>
+  <Card title="Label your issues" icon="tag">
+    Use consistent labels to help Lancey prioritize which issues to work on
+  </Card>
+  <Card title="Write clear descriptions" icon="pencil">
+    Detailed issue descriptions help Lancey understand the context and requirements
+  </Card>
+  <Card title="Set priorities" icon="zap">
+    Use Linear's priority field to guide task prioritization in Lancey
+  </Card>
+  <Card title="Team collaboration" icon="users">
+    Ensure team members have proper Linear access for PR reviews
+  </Card>
+</CardGroup>
+
+## Troubleshooting
+
+<Accordion title="Linear not showing up in my integrations?">
+  Make sure you:
+  - Have admin access to your Linear workspace
+  - Are signed into the correct Linear account
+  - Have granted Lancey the necessary permissions during authorization
+</Accordion>
+
+<Accordion title="PRs aren't linking to Linear issues?">
+  Verify that:
+  - The Linear connector is active in **Settings → Integrations**
+  - Your GitHub repository is also connected to Lancey
+  - Issue keys are correctly referenced in your repository names
+</Accordion>
+
+<Accordion title="Issue status isn't syncing?">
+  Check that:
+  - Both Linear and GitHub integrations are properly configured
+  - You have update permissions in both Linear and your GitHub repositories
+  - The PR has been successfully merged in GitHub
+</Accordion>
+
+## Next steps
+
+<CardGroup>
+  <Card title="GitHub Integration" icon="github" href="/integrations/github">
+    Learn how to configure your GitHub repositories
+  </Card>
+  <Card title="Integration Settings" icon="cog" href="/integrations/settings">
+    Explore advanced integration options
+  </Card>
+  <Card title="Create Tasks" icon="check" href="/tasks/create">
+    Start creating tasks with your connected integrations
+  </Card>
+</CardGroup>
+
+<Note>
+  Need help setting up Linear integration? Join our [Discord community](https://discord.com/invite/xthMgsBWeV) for quick support or [schedule a call](https://cal.com/pateladi/support) with our team.
+</Note>

@@ -24,21 +24,27 @@
             "group": "Tasks",
             "pages": [
               "tasks/create",
-              "tasks/modify"
+              "tasks/modify",
+              "tasks/auto-processing",
+              "tasks/watcher-agent"
             ]
           },
           {
             "group": "Integrations",
             "pages": [
-              "integrations/settings",
               "integrations/github",
-              "integrations/slack"
+              "integrations/slack",
+              "integrations/linear",
+              "integrations/intercom"
             ]
           },
           {
-            "group": "Customization",
+            "group": "Settings",
             "pages": [
-              "customize/rules"
+              "settings/memory",
+              "settings/billing",
+              "settings/members",
+              "settings/mcp-servers"
             ]
           }
         ]
