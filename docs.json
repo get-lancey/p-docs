@@ -57,13 +57,7 @@
       }
     ],
     "global": {
-      "anchors": [
-        {
-          "anchor": "Discord",
-          "href": "https://discord.com/invite/xthMgsBWeV",
-          "icon": "discord"
-        }
-      ]
+      "anchors": []
     }
   },
   "logo": {
