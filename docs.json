@@ -82,5 +82,11 @@
       "github": "https://github.com/getlancey",
       "linkedin": "https://linkedin.com/company/getlancey"
     }
-  }
+  },
+  "integrations": {
+    "posthog": {
+        "apiKey": "phc_L8cqHPgpKcJ6avzxp4q9ZLSiNSBgGSmJ64CkLaD1Drd",
+        "apiHost": "https://d2aymk9361dfrf.cloudfront.net",
+        "sessionRecording": true    }
+}
 }
